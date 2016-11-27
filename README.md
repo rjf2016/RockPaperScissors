@@ -11,6 +11,7 @@ Basic useful feature list:
  * To chat, simply type in the provided box and press 'send')
  * Game on!
  
+[Live site:](https://rps-multi.herokuapp.com)
 
 <img src="https://developer.ibm.com/dwblog/wp-content/uploads/sites/73/2016/02/dwblog-rockpaperscissors-e1455070810415.png" height="160px" width="300px">
 
