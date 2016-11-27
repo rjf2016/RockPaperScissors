@@ -1,0 +1,420 @@
+body 
+{
+  clear:both;	
+  position: relative;
+  color:#777777;
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  margin-bottom: 60px;
+}
+
+header{
+  text-align: center;
+  width:100%;
+  font-size: 18pt;
+  background-color: orange;
+  color:white;
+}
+
+header .logout{
+  position: absolute;
+  text-align: right;
+  vertical-align: middle;
+  right:20px;
+  top:10px;
+  font-size: 10pt;
+  background-color: orange;
+  color:white;
+
+}
+
+.mainDiv{
+	width:90%;
+	margin-left:10px;
+  margin-right:10px;
+  margin-top:50px;
+  height:600px;
+}
+
+.signinDiv{
+    text-align: center;
+    width=100%;
+}
+
+.signin-div emailformDiv{
+    top: 0px;
+    width: 40%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+.player1Div{
+  height: 180px;
+}
+
+.player2Div{
+  height: 180px;
+}
+
+.form-control{
+   font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+
+.p1div{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 10pt;
+  text-align: left;
+  color:white;
+  background-color: black;
+  padding-left: 5px;
+}
+
+.p2div{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 10pt;
+  text-align: left;
+  color:white;
+  background-color: black;
+  padding-left: 5px;
+}
+
+.p1scoreDiv{
+    position: absolute;
+    right: 20px;
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 10pt;
+    color: white;
+}
+.p2scoreDiv{
+    position: absolute;
+    right: 20px;
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 10pt;
+    color: white;
+}
+
+.signOut{
+    position: absolute;
+    right: 30px;
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 10pt;
+    color: white;
+}
+
+.socialIcon{
+  text-align: center;
+    width: 220px;
+    height:36px;
+ 
+}
+
+.slogan{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 12pt;
+  text-align: center;
+  color:black;
+}
+
+.WeaponDiv{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 12pt;
+  text-align: center;
+  color:blue;
+  height:150px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.p2InstrDiv
+{
+  position: absolute;
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 12pt;
+  text-align: center;
+  color:black;
+  bottom: 5px;
+  width: 100%;
+ }
+
+.p1InstrDiv
+{
+  position: absolute;
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 12pt;
+  text-align: center;
+  color:black;
+  bottom: 5px;
+  width: 100%;
+ }
+
+.resDiv
+{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 12pt;
+  text-align: center;
+  color:black;
+  width: 100%;
+ }
+
+.ResultsDiv{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 12pt;
+  text-align: center;
+  color:blue;
+  height:80px;
+}
+
+.avoid-clicks {
+  pointer-events: none;
+}
+
+.rock{
+  width: 139px;   
+  height: 120px;
+}
+.paper{
+  width: 139px;   
+  height: 120px;
+}
+.scissors{
+  width: 139px;   
+  height: 120px;
+}
+
+
+.disableDiv {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.row #inputGroup
+{
+  width:30%;
+}
+
+.btn-primary 
+{
+    padding: 24px 12px;
+    margin: 10px 5px;  
+    border-radius: 0;
+    margin-bottom:10px;
+}
+ 
+#url{
+  width: 450px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#container {
+  text-align: center;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+#user-info {
+  border: 1px solid #CCC;
+  clear: both;
+  margin: 0 auto 20px;
+  max-width: 400px;
+  padding: 10px;
+  text-align: left;
+}
+
+#copy-button{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 10pt;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+
+.shareText{
+  
+  width: 55%;
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 8pt;
+}
+#share-features{
+  width: 100%;
+}
+
+#share-with-friends{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 8pt;
+}
+
+#mobileURLDiv{
+   font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 8pt;
+  color: blue;
+}
+
+#copy-button{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 8pt;
+}
+
+.player1Div{
+  height: 90px;
+}
+
+.player2Div{
+  height: 90px;
+}
+
+.resDiv
+{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 9pt;
+  text-align: center;
+  color:black;
+  width: 100%;
+  height: 24px;
+  bottom: 0px;
+  padding-top: 3px;
+ 
+ }
+
+header{
+  text-align: center;
+  width:100%;
+  font-size: 11pt;
+  background-color: orange;
+  color:white;
+}
+
+header .logout{
+  position: absolute;
+  text-align: right;
+  vertical-align: middle;
+  right:20px;
+  top:2px;
+  font-size: 9pt;
+  background-color: orange;
+  color:white;
+
+}
+
+.rock{
+  width: 60px;   
+  height: 54px;
+}
+.paper{
+ width: 60px;   
+  height: 54px;
+}
+.scissors{
+  width: 60px;   
+  height: 54px;
+}
+
+.p2InstrDiv
+{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 10pt;
+  bottom:1px;
+ 
+ }
+
+.p1InstrDiv
+{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 10pt;
+  bottom:1px;
+}
+.p1Weapon{
+  height: 70px;
+}
+.p2Weapon{
+  height: 70px;
+}
+
+.WeaponDiv{
+  height: 70px;
+}
+.p1div{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 8pt;
+  text-align: left;
+  color:white;
+  background-color: black;
+  padding-left: 2px;
+}
+
+.p2div{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 8pt;
+  text-align: left;
+  color:white;
+  background-color: black;
+  padding-left: 2px;
+}
+
+.p1scoreDiv{
+    position: absolute;
+    right: 20px;
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 8pt;
+    color: white;
+}
+.p2scoreDiv{
+    position: absolute;
+    right: 20px;
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 8pt;
+    color: white;
+}
+
+#textMessage{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 9pt;
+}
+#chatText{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 9pt; 
+}
+
+
+#sendText
+{
+  font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 11pt;
+}
+
+#chatText
+{
+  min-width: 100%
+  height: 150px;
+}
+
+textarea {
+    width: 300px;
+    height: 150px;
+}
+
+}
+
+
+
+
+

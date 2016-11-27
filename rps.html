@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rock Paper Scissors</title>
+
+<!-- <link rel="stylesheet" href="reset.css">  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+
+<script src="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.js"></script>
+
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>  
+</head>
+
+<body>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=413180765374622";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<header>Rock Paper Scissors<a href="#"><span id="p1SignOut" class="logout">Logout</span></a></header>
+
+
+ <div class="container">
+
+<!-- ////   This DIV will not be shown if user is signed in -->
+
+
+    <div id="sign-in-status"></div>
+    <div id="sign-in"></div>
+    <div id="account-details"></div>
+
+
+<!-- ========= Player 1 section : player who started the game =========  -->
+ <div id="player1-div" class="player1Div">
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+          <div id="p-1-div" class="p1div">
+              <span id="currentP1User" class="p1div"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span id="p1score" class="p1scoreDiv">Wins: 0   Losses: 0</span>
+          </div>    
+      </div>                    
+      <div class="col-md-2"></div>
+   </div>
+
+
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      </div>                    
+      <div class="col-md-2"></div>
+   </div>
+
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+             <div id="p1Weapon" class="WeaponDiv">
+                <a href="#"><img id="Rock" class="rock" src="assets/images/rock.png"></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><img id="Paper" class="paper" src="assets/images/paper.png"></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><img id="Scissors" class="scissors" src="assets/images/scissors.png"></a>&nbsp;&nbsp;&nbsp;
+                <div id="p1Instructions" class="p1InstrDiv"></div>
+             </div>
+
+      </div>                    
+      <div class="col-md-2"></div>
+   </div>
+  </div> 
+
+
+
+<!-- ========= Results Div =========  -->
+
+ <div id="results-div" class="resDiv">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8"><div class="resDiv" id="resultsText">&nbsp;</div></div>
+      <div class="col-md-2"></div>    
+      </div> 
+   </div>
+
+<!-- ========= End Results Div =========  -->
+
+
+
+<!-- ========= Player 2 section : player who joined the previously started game  ========= -->
+ <div id="player2-div" class="player2Div">
+  
+   <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+             <div id="p2Weapon" class="WeaponDiv">
+                <a href="#"><img id="Rock" class="rock" src="assets/images/rock.png"></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><img id="Paper" class="paper" src="assets/images/paper.png"></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><img id="Scissors" class="scissors" src="assets/images/scissors.png"></a>&nbsp;&nbsp;&nbsp;
+             
+                <div id="p2Instructions" class="p2InstrDiv">Waiting for player to join...</div>
+             </div>
+      </div>                    
+      <div class="col-md-2"></div>
+   </div>
+  
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+          <div id="p-2-div" class="p2div">
+              <span id="currentP2User" class="p1div">Waiting for user</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span id="p2score" class="p2scoreDiv">Wins: 0   Losses: 0</span>
+          </div>    
+      </div>                    
+      <div class="col-md-2"></div>
+  </div>
+
+
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        
+    <div id="chatDiv" class="hidden">
+       <form method="post">
+        <textarea id="chatText" readonly class="form-control" rows="7"></textarea>
+        <div class="input-group">
+        <input type="text" id="textMessage" class="form-control" placeholder="Send message...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" id="sendText" type="button">Send</button>
+          </span>
+          </div>
+        </form>
+      </div>
+
+
+
+
+      <div id="shareBox">
+          <div id="share-with-friends">Invite a Friend</div>
+          <div id="share-features">
+            <table>
+              <tr>
+                <td>
+
+                  <input type="text" id="url" class="shareText" />
+                  <br />
+                  <button type="button" id="copy-button" class="btn">Copy</button>
+                  <script>
+                        // Copy to clipboard example
+                      document.querySelector("#copy-button").onclick = function() {
+                       // Select the content
+                       document.querySelector("#url").select();
+                       // Copy to the clipboard
+                       document.execCommand('copy');
+                      };
+                  </script>
+                </td>
+                <!--
+                <td>
+
+                  <a href="https://twitter.com/share" class="twitter-share-button" data-text="Ready for an Rock Paper Scissors duel?!" data-count="none" data-size="large">Tweet</a>
+                </td>
+                <td>
+                
+                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                  
+                  <div class="fb-like" data-send="true" data-width="250" data-layout="button_count" data-show-faces="false" data-font="arial"></div>
+                
+                </td>
+                  -->
+              </tr>
+            </table>
+          </div>
+
+          
+          <!--
+<div id="mobileURLDiv" class="hidden"> 
+           if on a mobile device, we will show this hyperlink to share easier from an iphone/android-->
+            
+          </div>
+
+
+        </div>
+
+      </div>                    
+      <div class="col-md-2"></div>
+  </div>
+
+
+
+
+ </div>
+
+
+<div id="thisPlayerNumber" class="hidden"></div>
+
+</div>
+
+ <footer class="footer">      
+ </footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--
+<script type="text/javascript" src="assets/javascript/email.js"></script>
+-->
+<script type="text/javascript" src="assets/javascript/app2.js"></script>
+
+</body>
+</html>
